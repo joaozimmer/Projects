@@ -1,0 +1,31 @@
+# San Francisco Housing Market Analysis (2005)
+
+## Overview
+This project performs an **Exploratory Data Analysis (EDA)** on a real estate transactions dataset, focusing strictly on properties sold in the year **2005**. The objective is to uncover market trends, price distributions, and geographical correlations using Python data science libraries.
+
+## Pipeline & Key Features
+- **Data Preprocessing & Cleaning:** Handles missing values, formats datetime variables, and isolates the year 2005 subset.
+- **Statistical Profiling:** Computes descriptive statistics for property prices, square footage, and room counts.
+- **Data Visualization:** Generates plots using **Matplotlib** and **Seaborn**:
+  - Price distribution histograms (with KDE).
+  - Bivariate scatter plots analyzing building square footage vs. sale price.
+  - Boxplots displaying price dispersion across different counties.
+- **Geospatial Enrichment:** Merges local postal codes with public government coordinate datasets to render a geographical distribution map via **Contextily** and **Geopandas**.
+
+## Project Structure
+```text
+sf-housing-analysis/
+│
+├── data_san_francisco.txt                              # Dataset file
+└── eda_san_francisco_housing_2005.py                  # Main analysis script
+
+**How to Run**:
+1)Clone the repository and navigate to the sf-housing-analysis folder.
+
+2)Ensure you have the required dependencies installed:
+ pip install pandas matplotlib seaborn geopandas contextily shapely
+
+3) Configure the File Path: 
+Open eda_san_francisco_housing_2005.py and verify that the file_path variable correctly points to the dataset text file in your local environment:
+  file_path = "data_san_francisco.txt"
+
